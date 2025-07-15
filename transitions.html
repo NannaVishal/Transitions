@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeeksforGeeks Style Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #f5f8f6;
+            padding: 10px 20px;
+            border-bottom: 1px solid #fdfbfb;
+            font-size: xx-large;
+            position: relative;
+            height: 80px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link,
+        .sign {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            color: #4d4c4c;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: rgb(238, 236, 236);
+            min-width: 250px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown a:hover {
+            background-color: #fdfbfb;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+
+        .logo-container {
+            position: absolute;
+            left: 50%;
+
+        }
+
+        .logo {
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+
+            <div class="nav-left">
+                <div class="nav-item">
+                    <div class="nav-link">Courses ▾</div>
+                    <div class="dropdown">
+                        <a href="#">GfG Classroom Program</a>
+                        <a href="#">DSA to Development</a>
+                        <a href="#">GATE 2026 Prep</a>
+                        <a href="#">IBM Certifications</a>
+                        <a href="#">Digital Marketing</a>
+                        <a href="#">Full Stack Development</a>
+                        <a href="#">Data Science & ML</a>
+                        <a href="#">All Courses</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <div class="nav-link">Tutorials ▾</div>
+                    <div class="dropdown">
+                        <a href="#">Java</a>
+                        <a href="#">Python</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">C++</a>
+                        <a href="#">Machine Learning</a>
+                        <a href="#">Data Science</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <div class="nav-link">Practice ▾</div>
+                    <div class="dropdown">
+                        <a href="#">DSA Practice</a>
+                        <a href="#">Coding Problems</a>
+                        <a href="#">Contests</a>
+                        <a href="#">Company-wise Practice</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <div class="nav-link">Jobs ▾</div>
+                    <div class="dropdown">
+                        <a href="#">Job Portal</a>
+                        <a href="#">Internships</a>
+                        <a href="#">Campus Drives</a>
+                        <a href="#">Fresher Jobs</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="nav-right">
+                <div class="sign">sign in</div>
+            </div>
+
+
+            <div class="logo-container">
+                <img class="logo"
+                    src="https://tse1.mm.bing.net/th/id/OIP.5SRUna_u76NIGHo5AqHO0gHaDv?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="GFG Logo" />
+            </div>
+        </div>
+    </nav>
+
+</body>
+
+</html>
